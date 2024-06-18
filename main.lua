@@ -72,11 +72,11 @@ vim.keymap.set('v', '<c-/>', 'gb')
 vim.keymap.set('n', '<c-/>', 'gcc')
 vim.keymap.set('i', '<c-/>', '<ESC>gcci')
 
--- Ctrl + Up, Ctrl + Down -> Move line of text up, move line of text down
-vim.keymap.set('n', '<c-Up>', 'ddk^P')
-vim.keymap.set('i', '<c-Up>', '<ESC>ddk^Pa')
-vim.keymap.set('n', '<c-Down>', 'ddj^P')
-vim.keymap.set('i', '<c-Down>', '<ESC>ddj^Pa')
+-- Alt + Up, Alt + Down -> Move line of text up, move line of text down
+vim.keymap.set('n', '<a-Up>', 'ddk^P')
+vim.keymap.set('i', '<a-Up>', '<ESC>ddk^Pa')
+vim.keymap.set('n', '<a-Down>', 'ddj^P')
+vim.keymap.set('i', '<a-Down>', '<ESC>ddj^Pa')
 
 -- Ctrl + Right, Ctrl + Left -> Navigate words
 vim.keymap.set({ 'v', 'n' }, '<c-Right>', 'e')
