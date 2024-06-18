@@ -72,6 +72,7 @@ vim.keymap.set('v', '<c-/>', 'gb')
 vim.keymap.set('n', '<c-/>', 'gcc')
 vim.keymap.set('i', '<c-/>', '<ESC>gcci')
 
+-- Ctrl + Up, Ctrl + Down -> Move line of text up, move line of text down
 vim.keymap.set('n', '<c-Up>', 'ddk^P')
 vim.keymap.set('i', '<c-Up>', '<ESC>ddk^Pa')
 vim.keymap.set('n', '<c-Down>', 'ddj^P')
@@ -79,7 +80,7 @@ vim.keymap.set('i', '<c-Down>', '<ESC>ddj^Pa')
 
 -- Ctrl + Right, Ctrl + Left -> Navigate words
 vim.keymap.set({ 'v', 'n' }, '<c-Right>', 'e')
-vim.keymap.set('i', '<c-Right>', '<ESC>ei')
+vim.keymap.set('i', '<c-Right>', '<ESC>ei<Right>')
 vim.keymap.set({ 'v', 'n' }, '<c-Left>', 'b')
 vim.keymap.set('i', '<c-Left>', '<ESC>bi')
 
@@ -97,5 +98,14 @@ vim.keymap.set('i', '<cs-Up>', '<ESC><c-w><Up>i')
 vim.keymap.set('n', '<cs-Down>', '<c-w><Down>')
 vim.keymap.set('i', '<cs-Down>', '<ESC><c-w><Down>i')
 
+-- Ctrl + T, Ctrl + Page Up, Ctrl + Page Down -> Create new Tab, Previous Tab, Next Tab
+vim.keymap.set({ 'v', 'i' }, '<c-t>', '<ESC>:tabnew<CR>i')
+vim.keymap.set('n', '<c-t>', ':tabnew<CR>')
+
+vim.keymap.set({ 'v', 'i' }, '<c-PageUp>', '<ESC>:tabprevious<CR>i')
+vim.keymap.set('n', '<c-PageUp>', ':tabprevious<CR>')
+vim.keymap.set({ 'v', 'i' }, '<c-PageDown>', '<ESC>:tabprevious<CR>i')
+vim.keymap.set('n', '<c-PageDown>', ':tabnext<CR>')
+
 vim.opt.tabstop = 4
-vim.opt.shiftwwidth = 4
+vim.opt.shiftwidth = 4
