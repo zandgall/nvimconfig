@@ -68,9 +68,9 @@ vim.keymap.set('n', '<cs-Tab>', ':bprevious<CR>')
 vim.keymap.set('i', '<cs-Tab>', '<ESC>:bprevious<CR>i')
 
 -- Ctrl + / -> Toggle Comment
-vim.keymap.set('v', '<c-/>', 'gb')
-vim.keymap.set('n', '<c-/>', 'gcc')
-vim.keymap.set('i', '<c-/>', '<ESC>gcci')
+-- vim.keymap.set('v', '<C-/>', 'gb')
+-- vim.keymap.set('n', '<C-/>', 'gcc')
+-- vim.keymap.set('i', '<C-/>', '<ESC>gcci')
 
 -- Alt + Up, Alt + Down -> Move line of text up, move line of text down
 vim.keymap.set('n', '<a-Up>', 'ddk^P')
@@ -109,3 +109,11 @@ vim.keymap.set('n', '<c-PageDown>', ':tabnext<CR>')
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+
+vim.cmd [[
+
+vmap <c-/> gb
+nmap <c-/> gcc
+imap <c-/> <ESC>gcci
+
+]]
