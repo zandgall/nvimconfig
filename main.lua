@@ -110,6 +110,9 @@ vim.keymap.set('n', '<c-PageDown>', ':tabnext<CR>')
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+
 vim.cmd [[
 
 vmap <c-/> gb
