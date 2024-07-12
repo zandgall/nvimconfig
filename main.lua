@@ -107,9 +107,15 @@ vim.keymap.set('n', '<c-PageUp>', ':tabprevious<CR>')
 vim.keymap.set({ 'v', 'i' }, '<c-PageDown>', '<ESC>:tabprevious<CR>i')
 vim.keymap.set('n', '<c-PageDown>', ':tabnext<CR>')
 
+-- Ctrl + . -> Toggle fold under cursor
+vim.keymap.set('n', '<c-.>', 'za')
+vim.keymap.set('i', '<c-.>', '<ESC>za<Down>i')
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+-- Enable folding with treesitter, with displays and a default fold level of 20 (anything under stays open by default)
+vim.opt.foldcolumn = 'auto:9'
 vim.opt.foldlevel = 20
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
