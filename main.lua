@@ -99,8 +99,8 @@ vim.keymap.set('n', '<cs-Down>', '<c-w><Down>')
 vim.keymap.set('i', '<cs-Down>', '<ESC><c-w><Down>i')
 
 -- Ctrl + T, Ctrl + Page Up, Ctrl + Page Down -> Create new Tab, Previous Tab, Next Tab
-vim.keymap.set({ 'v', 'i' }, '<c-t>', '<ESC>:tabnew<CR>i')
-vim.keymap.set('n', '<c-t>', ':tabnew<CR>')
+vim.keymap.set({ 'v', 'i' }, '<c-t>', '<ESC>:tabnew<CR>:NvimTreeOpen<CR>i')
+vim.keymap.set('n', '<c-t>', ':tabnew<CR>:NvimTreeOpen<CR>')
 
 vim.keymap.set({ 'v', 'i' }, '<c-PageUp>', '<ESC>:tabprevious<CR>i')
 vim.keymap.set('n', '<c-PageUp>', ':tabprevious<CR>')
